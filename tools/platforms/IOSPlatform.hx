@@ -809,7 +809,7 @@ class IOSPlatform extends PlatformTarget
 			var libExt = [
 				".iphoneos-v7.a",
 				".iphoneos-v7s.a",
-				".iphoneos-64.a",
+				".iphoneos-arm64.a",
 				".iphonesim.a",
 				".iphonesim-64.a"
 			][archID];
