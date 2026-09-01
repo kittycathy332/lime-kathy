@@ -368,7 +368,7 @@ class FileDialog #if android implements JNISafety #end
 			#if (!macro && lime_cffi)
 			#if hl
 			var bytes = NativeCFFI.lime_file_dialog_save_file(title, filter, defaultPath);
-			path = @:privateAccess String.fromUTF8(cast bytes);
+			path = bytes != null ? @:privateAccess String.fromUTF8(cast bytes) : null;
 			#else
 			path = NativeCFFI.lime_file_dialog_save_file(title, filter, defaultPath);
 			#end

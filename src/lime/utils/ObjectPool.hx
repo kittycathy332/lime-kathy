@@ -122,7 +122,7 @@ import haxe.ds.ObjectMap;
 
 	public function remove(object:T):Void
 	{
-		if (__pool.exists(object))
+		if (object != null && __pool.exists(object))
 		{
 			__pool.remove(object);
 
